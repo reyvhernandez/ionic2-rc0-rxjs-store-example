@@ -4,5 +4,5 @@ npm install
 
 ionic serve
 
-#see for more info
+#more info
 https://github.com/ngrx/store
