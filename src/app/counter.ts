@@ -1,4 +1,4 @@
-import { ActionReducer, Action } from '@ngrx/store';
+import {ActionReducer, Action} from "@ngrx/store";
 
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
@@ -18,4 +18,4 @@ export const counterReducer: ActionReducer<number> = (state: number = 0, action:
     default:
       return state;
   }
-}
+};

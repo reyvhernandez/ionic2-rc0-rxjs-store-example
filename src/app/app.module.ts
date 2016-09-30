@@ -1,9 +1,9 @@
-import { Store, StoreModule } from '@ngrx/store';
-import { counterReducer } from './counter';
-import { NgModule } from '@angular/core';
-import { IonicApp, IonicModule } from 'ionic-angular';
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import {StoreModule} from "@ngrx/store";
+import {counterReducer} from "./counter";
+import {NgModule} from "@angular/core";
+import {IonicApp, IonicModule} from "ionic-angular";
+import {MyApp} from "./app.component";
+import {HomePage} from "../pages/home/home";
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     IonicModule.forRoot(MyApp),
-    StoreModule.provideStore({ counter: counterReducer }, { counter: 0 })
+    StoreModule.provideStore({counter: counterReducer}, {counter: 0})
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -21,4 +21,5 @@ import { HomePage } from '../pages/home/home';
   ],
   providers: []
 })
-export class AppModule {}
+export class AppModule {
+}

@@ -3,7 +3,7 @@ import {Observable} from "rxjs";
 import {Store} from "@ngrx/store";
 import {INCREMENT, DECREMENT, RESET} from "./counter";
 
-interface AppState {
+export interface AppState {
   counter: number;
 }
 
@@ -16,10 +16,10 @@ interface AppState {
     `
 })
 export class MyApp {
-  counter: Observable<number>;
+  public counter: Observable<number>;
 
-  constructor(public store: Store<AppState>) {
-    this.counter = store.select('counter');
+  constructor(private store: Store<AppState>) {
+    this.counter = this.store.select('counter');
   }
 
   increment() {
